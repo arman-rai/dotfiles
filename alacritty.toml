@@ -1,0 +1,71 @@
+# Import the Catppuccin Mocha theme (Ensure the path is correct!)
+import = [
+    "~/.config/alacritty/catppuccin-mocha.toml"
+]
+
+[env]
+TERM = "xterm-256color"
+
+[window]
+padding = { x = 15, y = 15 }
+opacity = 0.8
+blur = true
+decorations = "None"
+startup_mode = "Windowed"
+dynamic_title = true
+
+[font]
+size = 14.0 # Font size in points
+
+[font.normal]
+family = "JetBrainsMono Nerd Font" # Use 'fc-list : family' on Linux to find names
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[font.offset]
+x = 0 # Horizontal character spacing
+y = 0 # Vertical line spacing (positive = more space)
+
+[[keyboard.bindings]]
+# Jump to previous word (Ctrl + Left)
+key = "Left"
+mods = "Control"
+chars = "\u001bb"
+
+[[keyboard.bindings]]
+# Jump to next word (Ctrl + Right)
+key = "Right"
+mods = "Control"
+chars = "\u001bf"
+
+[[keyboard.bindings]]
+# Delete word to the left (Ctrl + Backspace)
+key = "Back"
+mods = "Control"
+chars = "\u0017"
+
+[[keyboard.bindings]]
+# Delete word to the right (Ctrl + Delete)
+key = "Delete"
+mods = "Control"
+chars = "\u001bd"
+
+[cursor]
+style = { shape = "Beam", blinking = "On" }
+blink_interval = 500
+thickness = 0.15
+
+[scrolling]
+history = 50000
+multiplier = 3
+
+[selection]
+# Auto copy to clipboard on select
+save_to_clipboard = true
